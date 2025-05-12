@@ -3,7 +3,9 @@
 @import "tailwindcss";
 
 :root {
-  --font-jost: "Jost", sans-serif;
+  --duodocs-blue: #30b4e4;
+  --duodocs-blue-dark: #1a91c0;
+  --duodocs-blue-light: #7dd1f0;
 }
 
 html {
@@ -11,7 +13,11 @@ html {
 }
 
 body {
-  font-family: var(--font-jost);
+  font-family: "Jost", sans-serif;
+}
+
+.font-jost {
+  font-family: "Jost", sans-serif;
 }
 
 @layer base {

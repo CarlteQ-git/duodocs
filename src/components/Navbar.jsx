@@ -37,11 +37,11 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="DuoDocs Logo"
-              className="w-auto h-24 transition-all duration-300"
+              className="w-auto h-16 transition-all duration-300"
             />
           </Link>
-          <h1 className="hidden lg:block text-xl md:text-3xl font-bold tracking-tight mb-2">
-                DUODOCS <span className="text-teal-300">LTD</span>
+          <h1 className="hidden lg:block text-xl md:text-xl font-bold tracking-tight mb-2">
+                DUODOCS <span className="text-blue-300">LTD</span>
           </h1>
         </div>
 
@@ -58,10 +58,10 @@ const Navbar = () => {
               to={item.path}
               className={`${
                 scrolled || location.pathname !== "/"
-                  ? "text-gray-800 hover:text-teal-600"
-                  : "text-white hover:text-teal-200"
-              } transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-500 after:transition-all hover:after:w-full ${
-                location.pathname === item.path ? "after:w-full text-teal-600" : ""
+                  ? "text-gray-800 hover:text-blue-300"
+                  : "text-white hover:text-blue-200"
+              } transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-400 after:transition-all hover:after:w-full ${
+                location.pathname === item.path ? "after:w-full text-blue-300" : ""
               }`}
             >
               {item.name}
@@ -71,7 +71,7 @@ const Navbar = () => {
             to="/shop"
             className={`${
               scrolled || location.pathname !== "/"
-                ? "bg-teal-600 hover:bg-teal-700 text-white"
+                ? "bg-gradient-to-br from-blue-900/80 to-teal-900/80 hover:bg-teal-700 text-white"
                 : "bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white"
             } px-5 py-2 rounded-full font-medium transition-colors`}
           >
@@ -109,8 +109,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-gray-800 hover:text-teal-600 py-2 transition-colors font-medium border-b border-gray-100 ${
-                    location.pathname === item.path ? "text-teal-600" : ""
+                  className={`text-gray-800 hover:text-blue-300 py-2 transition-colors font-medium border-b border-gray-100 ${
+                    location.pathname === item.path ? "text-blue-300" : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -119,7 +119,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/shop"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-full font-medium transition-colors text-center"
+                className="bg-gradient-to-br from-blue-900/80 to-teal-500/80 hover:bg-teal-700 text-white px-4 py-3 rounded-full font-medium transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Shop

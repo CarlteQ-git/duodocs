@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 import Pond from '../assets/pond-setup.jpg'
+import Setup from '../assets/setup.jpg'
 
 const Services = () => {
   const [activeQuestion, setActiveQuestion] = useState(null)
@@ -120,7 +121,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-900 text-white">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-500 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -152,7 +153,7 @@ const Services = () => {
               animate={fingerlingInView ? "visible" : "hidden"}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Fingerlings</h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 We provide quality fingerlings sourced and bred according to the highest standards, contributing to
                 sustainable aquaculture practices. Our fingerlings are carefully selected for optimal growth, disease
@@ -160,7 +161,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -176,7 +177,7 @@ const Services = () => {
                 <img
                   src="https://images.pexels.com/photos/27180320/pexels-photo-27180320/free-photo-of-catched-fish-on-floor.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Person holding a basket of fingerlings"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-100 md:h-120 object-cover"
                 />
               </div>
             </motion.div>
@@ -195,7 +196,7 @@ const Services = () => {
               animate={fishNetsInView ? "visible" : "hidden"}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Fish Nets</h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Durable nets designed specifically for efficient fish capture and management, enhancing operational
                 efficiency. Our high-quality fishing nets are crafted from durable materials that withstand the rigors
@@ -203,7 +204,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Learn More
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -219,7 +220,7 @@ const Services = () => {
                 <img
                   src="https://images.pexels.com/photos/17757924/pexels-photo-17757924/free-photo-of-a-freshly-caught-trout-in-a-fishing-net-lying-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Fish nets for aquaculture"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-100 md:h-120 object-cover"
                 />
               </div>
             </motion.div>
@@ -238,7 +239,7 @@ const Services = () => {
               animate={pondConstructionInView ? "visible" : "hidden"}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Pond Construction</h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 We provide expert guidance and support for successful pond construction projects, equipping clients with
                 the knowledge and skills required to build sustainable and efficient ponds. Our services ensure that
@@ -247,7 +248,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Request a Quote
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -263,7 +264,7 @@ const Services = () => {
                 <img
                   src={Pond}
                   alt="Pond construction site"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-100 md:h-120 object-cover"
                 />
               </div>
             </motion.div>
@@ -282,7 +283,7 @@ const Services = () => {
               animate={waterSupplyInView ? "visible" : "hidden"}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Water Supply</h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Our reliable water supply solutions are tailored to the specific needs of aquaculture setups, ensuring
                 optimal conditions for fish health and growth. We implement sustainable water management practices that
@@ -290,7 +291,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Explore Solutions
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -306,7 +307,7 @@ const Services = () => {
                 <img
                   src="https://media.istockphoto.com/id/509183960/photo/water-storage-tanks-in-kenya.jpg?b=1&s=612x612&w=0&k=20&c=HG4pfa63xUyJmyuuQXf7c00jJDwoek-FU6SyegzFwOw="
                   alt="Water supply system for fish farming"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-100 md:h-120 object-cover"
                 />
               </div>
             </motion.div>
@@ -325,7 +326,7 @@ const Services = () => {
               animate={aquariumInView ? "visible" : "hidden"}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Aquarium Setup</h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Our customized aquarium installations cater to diverse settings, including homes, offices, and public
                 spaces, providing aesthetically pleasing aquatic environments. We handle everything from design to
@@ -333,7 +334,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Design Your Aquarium
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -347,9 +348,9 @@ const Services = () => {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://media.istockphoto.com/id/2196537546/photo/image-of-indoor-paludarium-with-waterfall-rocks-lush-plants-fish-thriving-inl-aquarium.jpg?b=1&s=612x612&w=0&k=20&c=LFldUYILMcs-nIg1gMV4neCvuWYwuEe16DazzmCuAjM="
+                  src={Setup}
                   alt="Custom aquarium setup"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-100 md:h-120 object-cover"
                 />
               </div>
             </motion.div>
@@ -367,7 +368,7 @@ const Services = () => {
             animate={faqInView ? "visible" : "hidden"}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">FAQ</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-900 to-teal-500 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Find answers to commonly asked questions about our services and fish farming practices.
             </p>
@@ -392,9 +393,9 @@ const Services = () => {
                 >
                   {faq.question}
                   {activeQuestion === index ? (
-                    <ChevronUp className="text-teal-600" size={20} />
+                    <ChevronUp className="text-blue-500" size={20} />
                   ) : (
-                    <ChevronDown className="text-teal-600" size={20} />
+                    <ChevronDown className="text-blue-500" size={20} />
                   )}
                 </button>
                 <div
@@ -416,8 +417,8 @@ const Services = () => {
             transition={{ delay: 0.6 }}
           >
             <a
-              href="#contact"
-              className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
             >
               Contact Us
               <ArrowRight className="ml-2" size={18} />

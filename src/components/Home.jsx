@@ -2,14 +2,8 @@ import { useState, useEffect, useRef } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
 import {
   ChevronRight,
-  Menu,
-  X,
-  Facebook,
-  Twitter,
-  Youtube,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
   ArrowUpRight,
 } from "lucide-react"
 import Navbar from './Navbar'
@@ -22,9 +16,6 @@ import Project2 from '../assets/project2.jpg';
 import Project3 from '../assets/project3.jpg';
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
   // Refs for scroll animations
   const statsRef = useRef(null)
   const statsInView = useInView(statsRef, { once: false, amount: 0.5 })
@@ -108,20 +99,6 @@ export default function HomePage() {
     },
   ]
 
-  // Handle scroll events
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -172,7 +149,7 @@ export default function HomePage() {
     return (
       <div className="text-center">
         <motion.div
-          className="text-5xl md:text-6xl font-bold text-teal-600 mb-2"
+          className="text-5xl md:text-6xl font-bold text-blue-400 mb-2"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={statsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.5, delay: delay / 1000 }}
@@ -201,7 +178,7 @@ export default function HomePage() {
             <source src="https://videos.pexels.com/video-files/855798/855798-sd_640_360_30fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-teal-900/80 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-teal-500/90 mix-blend-multiply"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-white">
@@ -242,7 +219,7 @@ export default function HomePage() {
             >
               <a
                 href="#shop"
-                className="inline-flex items-center bg-teal-600 hover:bg-teal-500 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-gradient-to-br from-blue-900 to-teal-500 hover:bg-teal-500 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Visit Our Shop
                 <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -279,10 +256,10 @@ export default function HomePage() {
             animate={aboutInView ? "visible" : "hidden"}
           >
             <motion.div className="lg:w-1/2" variants={fadeIn}>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-                Pioneering <span className="text-teal-600">Sustainable</span> Fish Farming
+              <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">
+                Pioneering <span className="text-blue-400">Sustainable</span> Fish Farming
               </h2>
-              <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-gradient-to-br from-blue-900 to-teal-500 mb-8"></div>
               <p className="text-lg mb-8 text-gray-700 leading-relaxed">
                 DuoDocs LTD is a Kenyan-based company specializing in all aspects of aquaculture and fishery services.
                 With a focus on providing high-quality products and expert consultation, we cater to both small-scale
@@ -290,7 +267,7 @@ export default function HomePage() {
               </p>
               <a
                 href="#learn-more"
-                className="group inline-flex items-center text-teal-600 font-medium hover:text-teal-800 transition-colors"
+                className="group inline-flex items-center text-blue-400 font-medium hover:text-teal-800 transition-colors"
               >
                 Learn more
                 <motion.div
@@ -304,11 +281,11 @@ export default function HomePage() {
             </motion.div>
             <motion.div className="lg:w-1/2" variants={fadeIn} transition={{ delay: 0.2 }}>
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                {/* Replace with your actual image */}
+                
                 <img
                   src={FishBasket}
                   alt="Fish basket"
-                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                  className="w-full h-120 object-cover transform hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6">
@@ -330,8 +307,8 @@ export default function HomePage() {
             initial="hidden"
             animate={missionInView ? "visible" : "hidden"}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
+            <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
+            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-500 mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -343,7 +320,7 @@ export default function HomePage() {
               transition={{ delay: 0.2 }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-300 to-teal-200 flex items-center justify-center mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -354,12 +331,12 @@ export default function HomePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-teal-600"
+                    className="text-blue-500"
                   >
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-teal-600">Mission</h3>
+                <h3 className="text-2xl font-semibold text-blue-400">Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
                 To produce premium quality fish products through sustainable aquaculture practices, while contributing
@@ -375,7 +352,7 @@ export default function HomePage() {
               transition={{ delay: 0.4 }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-300 to-teal-200 flex items-center justify-center mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -386,14 +363,14 @@ export default function HomePage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-teal-600"
+                    className="text-blue-400"
                   >
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="M12 16l4-4-4-4"></path>
                     <path d="M8 12h8"></path>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-teal-600">Vision</h3>
+                <h3 className="text-2xl font-semibold text-blue-400">Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
                 To be the leading partner for all aquaculture needs in Kenya, driving innovation and sustainability in
@@ -411,7 +388,7 @@ export default function HomePage() {
           >
             <a
               href="#shop"
-              className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
+              className="inline-flex items-center bg-gradient-to-br from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
             >
               Visit Our Shop
               <ChevronRight className="ml-2" />
@@ -421,7 +398,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-gradient-to-br from-blue-900 to-teal-900 text-white" ref={servicesRef}>
+      <section id="services" className="py-24 bg-gradient-to-br from-blue-900 to-teal-500 text-white" ref={servicesRef}>
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-3xl mx-auto text-center mb-16"
@@ -429,8 +406,8 @@ export default function HomePage() {
             initial="hidden"
             animate={servicesInView ? "visible" : "hidden"}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">OUR SERVICES</h2>
-            <div className="w-24 h-1 bg-teal-400 mx-auto"></div>
+            <h2 className="text-xl md:text-3xl font-bold mb-6">OUR SERVICES</h2>
+            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto"></div>
           </motion.div>
 
           <motion.div
@@ -541,7 +518,7 @@ export default function HomePage() {
             transition={{ delay: 0.6 }}
           >
             <a
-              href="#all-services"
+              href="/services"
               className="inline-flex items-center border-2 border-white hover:bg-white hover:text-teal-900 text-white px-8 py-4 rounded-full font-medium transition-colors"
             >
               View all services
@@ -555,8 +532,8 @@ export default function HomePage() {
       <section id="how-we-work" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">How We Work</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">How We Work</h2>
+            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Our approach to fish farming is guided by a comprehensive understanding of aquaculture principles and best
               practices.
@@ -574,7 +551,7 @@ export default function HomePage() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <div className="flex-shrink-0 mr-6">
-                  <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 text-2xl font-bold">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-200 to-teal-100 flex items-center justify-center text-blue-400 text-2xl font-bold">
                     {step.number}
                   </div>
                 </div>
@@ -597,8 +574,8 @@ export default function HomePage() {
             initial="hidden"
             animate={projectsInView ? "visible" : "hidden"}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Our Projects</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Our Projects</h2>
+            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700 mb-8">
               At DuoDocs Fish Farm, we are proud to introduce our latest project: a sustainable aquaculture initiative
               aimed at revolutionizing the way fish farming is conducted in Kenya.
@@ -639,7 +616,7 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="py-24 bg-white" ref={statsRef}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-blue-400">
           <div className="flex flex-wrap justify-center text-center gap-16">
             <Counter value="18" label="projects completed" delay={0} />
             <Counter value="2Years" label="of experience" delay={200} />
@@ -657,8 +634,8 @@ export default function HomePage() {
             initial="hidden"
             animate={testimonialsInView ? "visible" : "hidden"}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Testimonials</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
+            <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Testimonials</h2>
+            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto"></div>
           </motion.div>
 
           <motion.div
@@ -727,8 +704,8 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-8 leading-relaxed">{testimonial.quote}</p>
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-                      <span className="text-teal-600 font-bold">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-200/80 to-teal-200/80 flex items-center justify-center">
+                      <span className="text-blue-400 font-bold">
                         {testimonial.name.split(" ")[0][0]}
                         {testimonial.name.split(" ")[1][0]}
                       </span>

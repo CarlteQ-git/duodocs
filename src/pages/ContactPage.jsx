@@ -13,6 +13,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react"
+import { FaTiktok } from "react-icons/fa6"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
@@ -142,22 +143,22 @@ const ContactPage = () => {
   // Contact info data
   const contactInfo = [
     {
-      icon: <MapPin className="text-teal-600" size={24} />,
+      icon: <MapPin className="text-blue-600" size={24} />,
       title: "Our Address",
       details: ["PO BOX 1803, GPO NAIROBI", "CBD STREET, UTALI STREET", "BUILDING: UTALI HOUSE"],
     },
     {
-      icon: <Clock className="text-teal-600" size={24} />,
+      icon: <Clock className="text-blue-600" size={24} />,
       title: "Working Hours",
       details: ["Monday - Friday", "9:00AM - 5:00PM"],
     },
     {
-      icon: <Phone className="text-teal-600" size={24} />,
+      icon: <Phone className="text-blue-600" size={24} />,
       title: "Phone",
       details: ["+254708247412"],
     },
     {
-      icon: <Mail className="text-teal-600" size={24} />,
+      icon: <Mail className="text-blue-600" size={24} />,
       title: "Email",
       details: ["DUODOCS@GMAIL.COM"],
     },
@@ -168,7 +169,7 @@ const ContactPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-900 text-white">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-500 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -176,7 +177,7 @@ const ContactPage = () => {
             initial="hidden"
             animate={headerInView ? "visible" : "hidden"}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <h1 className="text-4xl md:text-4xl font-bold mb-6">Contact Us</h1>
             <div className="w-24 h-1 bg-teal-400 mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               We would love to hear from you. Feel free to reach out using the below details or fill out the contact
@@ -244,32 +245,22 @@ const ContactPage = () => {
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#facebook"
-                    className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-colors"
-                    aria-label="Facebook"
+                    href="https://www.facebook.com/profile.php?id=61558367348022" target='_blank' rel="noopener noreferrer"
+                    className="bg-blue-400/10 hover:bg-blue-400/20 text-gray-900 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                   >
                     <Facebook size={20} />
                   </a>
                   <a
-                    href="#twitter"
-                    className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-colors"
-                    aria-label="Twitter"
-                  >
-                    <Twitter size={20} />
-                  </a>
-                  <a
-                    href="#instagram"
-                    className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-colors"
-                    aria-label="Instagram"
+                    href="https://www.instagram.com/duodocsfishfarms?igsh=M213endmMnY3MmN0" target='_blank' rel="noopener noreferrer"
+                    className="bg-blue-400/10 hover:bg-blue-400/20 text-gray-900 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                   >
                     <Instagram size={20} />
                   </a>
                   <a
-                    href="#linkedin"
-                    className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-colors"
-                    aria-label="LinkedIn"
+                    href="https://www.tiktok.com/@duodocs?_t=8mX5PAbTHK1&_r=1" target='_blank' rel="noopener noreferrer"
+                    className="bg-blue-400/10 hover:bg-blue-400/20 text-gray-900 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                   >
-                    <Linkedin size={20} />
+                    <FaTiktok size={20}/>
                   </a>
                 </div>
               </div>
@@ -285,7 +276,7 @@ const ContactPage = () => {
             >
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
-                <div className="w-20 h-1 bg-teal-500 mb-8"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-teal-500"></div>
 
                 {formStatus === "success" ? (
                   <motion.div
@@ -391,7 +382,7 @@ const ContactPage = () => {
                     <button
                       type="submit"
                       disabled={formStatus === "submitting"}
-                      className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="inline-flex items-center justify-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {formStatus === "submitting" ? (
                         <>
@@ -422,7 +413,7 @@ const ContactPage = () => {
             initial="hidden"
             animate={mapInView ? "visible" : "hidden"}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Visit Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Visit Us</h2>
             <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               We're conveniently located in the heart of Nairobi's CBD. Come visit our office during business hours.
@@ -436,7 +427,6 @@ const ContactPage = () => {
             animate={mapInView ? "visible" : "hidden"}
             transition={{ delay: 0.2 }}
           >
-            {/* Replace with actual Google Maps iframe */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8176213990313!2d36.81663!3d-1.284351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d0f3049a2d%3A0xada6f45a3d9f3a6c!2sUtalii%20House%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1651234567890!5m2!1sen!2ske"
               width="100%"
@@ -466,7 +456,7 @@ const ContactPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
             <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Find quick answers to common questions about our services and contact methods.

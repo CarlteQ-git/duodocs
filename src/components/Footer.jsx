@@ -1,15 +1,18 @@
-import { Facebook, Twitter, Youtube, ChevronRight } from "lucide-react"
+import { Facebook, Instagram, ChevronRight } from "lucide-react"
+import { FaTiktok } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import Logo from '../assets/duodocs-logo-png-01.png'
 
 const Footer = () => {
+  // Get current year for copyright
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-gradient-to-br from-blue-900 to-teal-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-blue-900 to-teal-500 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="mb-6">
-              {/* Replace with your actual logo */}
               <img src={Logo} alt="DuoDocs Logo" className="w-auto h-32" />
             </div>
             <p className="mb-6 text-gray-300 leading-relaxed">
@@ -26,7 +29,6 @@ const Footer = () => {
                 { name: "Home", path: "/" },
                 { name: "Services", path: "/services" },
                 { name: "Team", path: "/team" },
-                { name: "Products", path: "/products" },
                 { name: "Contact", path: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
@@ -49,29 +51,29 @@ const Footer = () => {
 
             <div className="flex space-x-4">
               <a
-                href="#facebook"
+                href="https://www.facebook.com/profile.php?id=61558367348022" target='_blank' rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#twitter"
+                href="https://www.instagram.com/duodocsfishfarms?igsh=M213endmMnY3MmN0" target='_blank' rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
               <a
-                href="#youtube"
+                href="https://www.tiktok.com/@duodocs?_t=8mX5PAbTHK1&_r=1" target='_blank' rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
               >
-                <Youtube size={20} />
+                <FaTiktok size={20}/>
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-gray-300">
-          <p>Copyright © 2024 DuoDocs LTD. All Rights Reserved | Privacy Policy</p>
+          <p>&copy; {currentYear} DuoDocs LTD. All Rights Reserved | Privacy Policy</p>
           <p className="mt-2">Developed by CariteQ</p>
         </div>
       </div>

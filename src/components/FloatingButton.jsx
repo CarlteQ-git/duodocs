@@ -18,7 +18,7 @@ const FloatingButton = () => {
             {/* Floating Button */}
             <a
                 href="#"
-                className="fixed bottom-8 right-8 bg-teal-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-teal-500 transition-colors z-40 group"
+                className="fixed bottom-8 right-8 bg-gradient-to-br from-blue-900 to-teal-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-teal-500 transition-colors z-40 group"
                 aria-label="Back to top"
             >
                 <motion.div
