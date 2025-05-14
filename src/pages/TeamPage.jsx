@@ -90,7 +90,7 @@ const TeamPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-500 text-white">
+      <section className="relative pt-32 pb-20 bg-blue-600/95 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -99,7 +99,7 @@ const TeamPage = () => {
             animate={headerInView ? "visible" : "hidden"}
           >
             <h1 className="text-4xl md:text-4xl font-bold mb-6">Meet The Team</h1>
-            <div className="w-24 h-1 bg-teal-400 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               At DuoDocs Fish Farm, our success is driven by the dedication, expertise, and passion of our talented team
               members. Each individual brings a unique set of skills and experiences to the table, contributing to our

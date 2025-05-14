@@ -121,7 +121,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-500 text-white">
+      <section className="relative pt-32 pb-20 bg-blue-600/95 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -130,7 +130,7 @@ const Services = () => {
             animate={headerInView ? "visible" : "hidden"}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
-            <div className="w-24 h-1 bg-teal-400 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               At DuoDocs LTD, we offer a wide range of services tailored to meet the diverse needs of fish farmers,
               whether small-scale or commercial ventures. Our services include the provision of fingerlings, fish feeds,
@@ -139,6 +139,22 @@ const Services = () => {
               nationwide, ensuring prompt and efficient delivery of products and services.
             </p>
           </motion.div>
+        </div>
+        
+        {/* Wave Separator */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 120"
+            className="w-full h-auto"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#ffffff"
+              fillOpacity="1"
+              d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+            ></path>
+          </svg>
         </div>
       </section>
 
@@ -161,7 +177,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -204,7 +220,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Learn More
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -248,7 +264,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Request a Quote
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -291,7 +307,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Explore Solutions
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -334,7 +350,7 @@ const Services = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
+                className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all hover:translate-y-1 group"
               >
                 Design Your Aquarium
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -418,7 +434,7 @@ const Services = () => {
           >
             <a
               href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
+              className="inline-flex items-center bg-blue-600/90 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
             >
               Contact Us
               <ArrowRight className="ml-2" size={18} />

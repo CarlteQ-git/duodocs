@@ -71,7 +71,7 @@ const Navbar = () => {
             to="/shop"
             className={`${
               scrolled || location.pathname !== "/"
-                ? "bg-gradient-to-br from-blue-900/80 to-teal-900/80 hover:bg-teal-700 text-white"
+                ? "bg-blue-600/90 hover:bg-teal-700 text-white"
                 : "bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white"
             } px-5 py-2 rounded-full font-medium transition-colors`}
           >
@@ -119,7 +119,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/shop"
-                className="bg-gradient-to-br from-blue-900/80 to-teal-500/80 hover:bg-teal-700 text-white px-4 py-3 rounded-full font-medium transition-colors text-center"
+                className="bg-blue-600 hover:bg-teal-700 text-white px-4 py-3 rounded-full font-medium transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Shop

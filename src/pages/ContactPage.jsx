@@ -169,7 +169,7 @@ const ContactPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-500 text-white">
+      <section className="relative pt-32 pb-20 bg-blue-600/95 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -178,7 +178,7 @@ const ContactPage = () => {
             animate={headerInView ? "visible" : "hidden"}
           >
             <h1 className="text-4xl md:text-4xl font-bold mb-6">Contact Us</h1>
-            <div className="w-24 h-1 bg-teal-400 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               We would love to hear from you. Feel free to reach out using the below details or fill out the contact
               form and we'll get back to you as soon as possible.
@@ -382,7 +382,7 @@ const ContactPage = () => {
                     <button
                       type="submit"
                       disabled={formStatus === "submitting"}
-                      className="inline-flex items-center justify-center bg-gradient-to-r from-blue-900 to-teal-500 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="inline-flex items-center justify-center bg-blue-600/95 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {formStatus === "submitting" ? (
                         <>
