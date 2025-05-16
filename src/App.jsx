@@ -19,7 +19,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          
+	        <Route path="/products" element={<ProductsPage />} />          
         </Routes>
         <FloatingButton />
       </div>

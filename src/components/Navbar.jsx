@@ -37,7 +37,7 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="DuoDocs Logo"
-              className="w-auto h-16 transition-all duration-300"
+              className="w-auto h-18 transition-all duration-300"
             />
           </Link>
           <h1 className="hidden lg:block text-xl md:text-xl font-bold tracking-tight mb-2">
@@ -71,7 +71,7 @@ const Navbar = () => {
             to="/shop"
             className={`${
               scrolled || location.pathname !== "/"
-                ? "bg-blue-600/90 hover:bg-teal-700 text-white"
+                ? "bg-blue-600/85 hover:bg-teal-700 text-white"
                 : "bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white"
             } px-5 py-2 rounded-full font-medium transition-colors`}
           >

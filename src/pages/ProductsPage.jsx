@@ -61,7 +61,7 @@ const ProductsPage = () => {
       name: "Tilapia Fingerlings",
       category: "fingerlings",
       price: 1500,
-      image: "https://via.placeholder.com/300x300?text=Tilapia+Fingerlings",
+      image: "https://i.pinimg.com/736x/9a/41/d2/9a41d2a0bb867a5011e5ca96961c4f67.jpg",
       rating: 4.8,
       reviews: 124,
       description:
@@ -74,7 +74,7 @@ const ProductsPage = () => {
       name: "Catfish Fingerlings",
       category: "fingerlings",
       price: 1800,
-      image: "https://via.placeholder.com/300x300?text=Catfish+Fingerlings",
+      image: "https://i.pinimg.com/736x/9b/83/bd/9b83bd53bb3634e4f31ede86761c05ee.jpg",
       rating: 4.7,
       reviews: 98,
       description:
@@ -87,7 +87,7 @@ const ProductsPage = () => {
       name: "Premium Fish Feed (5kg)",
       category: "fish-feed",
       price: 2500,
-      image: "https://via.placeholder.com/300x300?text=Premium+Fish+Feed",
+      image: "https://i.pinimg.com/736x/2f/b9/b1/2fb9b135942aca3142781393f56b023c.jpg",
       rating: 4.9,
       reviews: 156,
       description: "Nutritionally balanced fish feed formulated to promote healthy growth and enhance immune systems.",
@@ -112,7 +112,7 @@ const ProductsPage = () => {
       name: "Fishing Net (Small)",
       category: "nets",
       price: 3500,
-      image: "https://via.placeholder.com/300x300?text=Fishing+Net+Small",
+      image: "https://i.pinimg.com/736x/d1/bf/73/d1bf7344f94aa2325d83ee33ad3a230e.jpg",
       rating: 4.5,
       reviews: 62,
       description:
@@ -125,7 +125,7 @@ const ProductsPage = () => {
       name: "Fishing Net (Large)",
       category: "nets",
       price: 5500,
-      image: "https://via.placeholder.com/300x300?text=Fishing+Net+Large",
+      image: "https://i.pinimg.com/736x/71/15/35/711535734961d920676d1f052d96aba4.jpg",
       rating: 4.7,
       reviews: 45,
       description: "Heavy-duty large fishing net designed for commercial fish farming operations and large ponds.",
@@ -137,7 +137,7 @@ const ProductsPage = () => {
       name: "Water Quality Test Kit",
       category: "equipment",
       price: 4200,
-      image: "https://via.placeholder.com/300x300?text=Water+Quality+Test+Kit",
+      image: "https://i.pinimg.com/736x/eb/09/93/eb09937222ffcc5737a5f6bab44b5166.jpg",
       rating: 4.8,
       reviews: 73,
       description:
@@ -150,7 +150,7 @@ const ProductsPage = () => {
       name: "Pond Aerator",
       category: "equipment",
       price: 8500,
-      image: "https://via.placeholder.com/300x300?text=Pond+Aerator",
+      image: "https://i.pinimg.com/736x/7a/84/18/7a841884383e6c7c4715637e8c526a70.jpg",
       rating: 4.9,
       reviews: 58,
       description:
@@ -163,7 +163,7 @@ const ProductsPage = () => {
       name: "Small Aquarium Kit (20L)",
       category: "aquarium",
       price: 6500,
-      image: "https://via.placeholder.com/300x300?text=Small+Aquarium+Kit",
+      image: "https://i.pinimg.com/736x/22/57/90/22579036859af2c49924d57ac41fb5f2.jpg",
       rating: 4.6,
       reviews: 39,
       description:
@@ -176,7 +176,7 @@ const ProductsPage = () => {
       name: "Large Aquarium Kit (100L)",
       category: "aquarium",
       price: 15000,
-      image: "https://via.placeholder.com/300x300?text=Large+Aquarium+Kit",
+      image: "https://i.pinimg.com/736x/65/a7/bd/65a7bd687147c1e59194346e19bfd2d0.jpg",
       rating: 4.8,
       reviews: 27,
       description:
@@ -270,7 +270,7 @@ const ProductsPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-blue-900 to-teal-900 text-white">
+      <section className="relative pt-32 pb-20 bg-blue-600/85 text-white">
         <div className="container mx-auto px-4" ref={headerRef}>
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -279,7 +279,7 @@ const ProductsPage = () => {
             animate={headerInView ? "visible" : "hidden"}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Products</h1>
-            <div className="w-24 h-1 bg-teal-400 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               Discover our premium range of fish farming products, from high-quality fingerlings to essential equipment.
               Everything you need for successful aquaculture.
@@ -326,7 +326,7 @@ const ProductsPage = () => {
             animate={featuredInView ? "visible" : "hidden"}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Featured Products</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-blue-600/85 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Our most popular and highest quality products, selected to meet your aquaculture needs.
             </p>
@@ -350,10 +350,10 @@ const ProductsPage = () => {
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <div className="absolute top-4 left-4 bg-blue-600/85 text-white text-xs font-bold px-2 py-1 rounded">
                     Featured
                   </div>
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-teal-600 text-xs font-bold px-2 py-1 rounded">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-blue-400 text-xs font-bold px-2 py-1 rounded">
                     {product.stock}
                   </div>
                 </div>
@@ -375,8 +375,8 @@ const ProductsPage = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{product.description.substring(0, 100)}...</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold text-teal-600">KSh {product.price.toLocaleString()}</span>
-                    <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
+                    <span className="text-xl font-bold text-blue-400">KSh {product.price.toLocaleString()}</span>
+                    <button className="bg-blue-600/85 hover:bg-teal-700 text-white px-4 py-0.5 rounded-lg transition-colors flex items-center">
                       <ShoppingCart size={18} className="mr-2" />
                       Add to Cart
                     </button>
@@ -388,7 +388,7 @@ const ProductsPage = () => {
 
           <div className="text-center mt-12">
             <motion.button
-              className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center bg-blue-600/85 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -409,7 +409,7 @@ const ProductsPage = () => {
             animate={productsInView ? "visible" : "hidden"}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">All Products</h2>
-            <div className="w-24 h-1 bg-teal-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-blue mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Browse our complete collection of high-quality aquaculture products.
             </p>
@@ -425,7 +425,7 @@ const ProductsPage = () => {
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       activeCategory === category.id
-                        ? "bg-teal-600 text-white"
+                        ? "bg-blue-600/85 text-white"
                         : "bg-white text-gray-700 hover:bg-gray-100"
                     }`}
                   >
@@ -455,7 +455,7 @@ const ProductsPage = () => {
                 <div className="flex border border-gray-300 rounded-lg overflow-hidden">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`px-3 py-2 ${viewMode === "grid" ? "bg-teal-600 text-white" : "bg-white text-gray-700"}`}
+                    className={`px-3 py-2 ${viewMode === "grid" ? "bg-blue-600/85 text-white" : "bg-white text-gray-700"}`}
                     aria-label="Grid view"
                   >
                     <svg
@@ -477,7 +477,7 @@ const ProductsPage = () => {
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
-                    className={`px-3 py-2 ${viewMode === "list" ? "bg-teal-600 text-white" : "bg-white text-gray-700"}`}
+                    className={`px-3 py-2 ${viewMode === "list" ? "bg-blue-600/85 text-white" : "bg-white text-gray-700"}`}
                     aria-label="List view"
                   >
                     <svg
@@ -580,15 +580,15 @@ const ProductsPage = () => {
                   <h4 className="font-medium text-gray-700 mb-3">Availability</h4>
                   <div className="space-y-2">
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded text-teal-600 focus:ring-teal-500" defaultChecked />
+                      <input type="checkbox" className="rounded text-blue-400 focus:ring-blue-500" defaultChecked />
                       <span className="ml-2 text-gray-700">In Stock</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded text-teal-600 focus:ring-teal-500" defaultChecked />
+                      <input type="checkbox" className="rounded text-blue-400 focus:ring-blue-500" defaultChecked />
                       <span className="ml-2 text-gray-700">Low Stock</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded text-teal-600 focus:ring-teal-500" />
+                      <input type="checkbox" className="rounded text-blue-400 focus:ring-blue-500" />
                       <span className="ml-2 text-gray-700">Out of Stock</span>
                     </label>
                   </div>
@@ -599,7 +599,7 @@ const ProductsPage = () => {
                   <div className="space-y-2">
                     {[5, 4, 3, 2, 1].map((rating) => (
                       <label key={rating} className="flex items-center">
-                        <input type="checkbox" className="rounded text-teal-600 focus:ring-teal-500" />
+                        <input type="checkbox" className="rounded text-blue-400 focus:ring-blue-500" />
                         <span className="ml-2 flex items-center text-gray-700">
                           {[...Array(5)].map((_, i) => (
                             <Star
@@ -631,7 +631,7 @@ const ProductsPage = () => {
                         setSearchQuery("")
                         setPriceRange([0, 10000])
                       }}
-                      className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors"
+                      className="inline-flex items-center bg-blue-600/85 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors"
                     >
                       <Check size={18} className="mr-2" />
                       Reset Filters
@@ -657,11 +657,11 @@ const ProductsPage = () => {
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           {product.featured && (
-                            <div className="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded">
+                            <div className="absolute top-4 left-4 bg-blue-600/85 text-white text-xs font-bold px-2 py-1 rounded">
                               Featured
                             </div>
                           )}
-                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-teal-600 text-xs font-bold px-2 py-1 rounded">
+                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-blue-400 text-xs font-bold px-2 py-1 rounded">
                             {product.stock}
                           </div>
                         </div>
@@ -683,10 +683,10 @@ const ProductsPage = () => {
                           <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
                           <p className="text-gray-600 text-sm mb-4">{product.description.substring(0, 80)}...</p>
                           <div className="flex justify-between items-center">
-                            <span className="text-xl font-bold text-teal-600">
+                            <span className="text-xl font-bold text-blue-400">
                               KSh {product.price.toLocaleString()}
                             </span>
-                            <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
+                            <button className="bg-blue-600/85 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
                               <ShoppingCart size={18} className="mr-2" />
                               Add
                             </button>
@@ -716,11 +716,11 @@ const ProductsPage = () => {
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                             {product.featured && (
-                              <div className="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded">
+                              <div className="absolute top-4 left-4 bg-blue-600/85 text-white text-xs font-bold px-2 py-1 rounded">
                                 Featured
                               </div>
                             )}
-                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-teal-600 text-xs font-bold px-2 py-1 rounded">
+                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-blue-400 text-xs font-bold px-2 py-1 rounded">
                               {product.stock}
                             </div>
                           </div>
@@ -742,10 +742,10 @@ const ProductsPage = () => {
                             <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
                             <p className="text-gray-600 text-sm mb-4 flex-grow">{product.description}</p>
                             <div className="flex justify-between items-center mt-4">
-                              <span className="text-xl font-bold text-teal-600">
+                              <span className="text-xl font-bold text-blue-400">
                                 KSh {product.price.toLocaleString()}
                               </span>
-                              <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
+                              <button className="bg-blue-600/85 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
                                 <ShoppingCart size={18} className="mr-2" />
                                 Add to Cart
                               </button>
@@ -764,7 +764,7 @@ const ProductsPage = () => {
                       <button className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors">
                         Previous
                       </button>
-                      <button className="px-4 py-2 rounded-lg bg-teal-600 text-white font-medium">1</button>
+                      <button className="px-4 py-2 rounded-lg bg-blue-600/85 text-white font-medium">1</button>
                       <button className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors">
                         2
                       </button>
@@ -786,7 +786,7 @@ const ProductsPage = () => {
       {/* Call to Action Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-blue-900 to-teal-900 rounded-2xl overflow-hidden shadow-xl">
+          <div className="bg-blue-600/85 rounded-2xl overflow-hidden shadow-xl">
             <div className="px-6 py-12 md:p-12 text-white text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help Choosing the Right Products?</h2>
               <p className="text-lg text-gray-100 max-w-2xl mx-auto mb-8">
@@ -801,7 +801,7 @@ const ProductsPage = () => {
               >
                 <a
                   href="/contact"
-                  className="inline-flex items-center bg-white text-teal-900 hover:bg-gray-100 px-8 py-4 rounded-full font-medium transition-colors"
+                  className="inline-flex items-center bg-white text-blue-400 hover:bg-gray-100 px-8 py-4 rounded-full font-medium transition-colors"
                 >
                   Contact Our Experts
                   <ArrowRight className="ml-2" size={18} />

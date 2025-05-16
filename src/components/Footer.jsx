@@ -1,7 +1,7 @@
 import { Facebook, Instagram, ChevronRight } from "lucide-react"
 import { FaTiktok } from "react-icons/fa6"
 import { Link } from "react-router-dom"
-import Logo from '../assets/duodocs-logo-png-01.png'
+import Logo from '../assets/duodocs logowhite-01.png'
 
 const Footer = () => {
   // Get current year for copyright
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="mb-4">
-              <img src={Logo} alt="DuoDocs Logo" className="w-auto h-32" />
+              <img src={Logo} alt="DuoDocs Logo" className="w-auto h-42" />
             </div>
             <p className="mb-2 text-gray-200 leading-relaxed">
               Our comprehensive range of services includes the provision of fingerlings, fish feeds, fishing nets,

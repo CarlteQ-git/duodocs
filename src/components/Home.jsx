@@ -40,6 +40,9 @@ export default function HomePage() {
   // Hero section carousel
   const [currentImage, setCurrentImage] = useState(0)
   const images = [
+    "https://images.pexels.com/photos/8621393/pexels-photo-8621393.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/19040471/pexels-photo-19040471/free-photo-of-close-up-of-a-person-holding-a-catfish.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/23885137/pexels-photo-23885137/free-photo-of-pile-of-caught-two-spot-catfish.jpeg?auto=compress&cs=tinysrgb&w=600",
     FishBasket,
     Project1,
     Project2,
@@ -412,7 +415,7 @@ export default function HomePage() {
               />
               
               {/* Enhanced Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/6S0"></div>
               
               {/* Additional wavy gradient for more visual interest */}
               <div className="absolute inset-0 opacity-60 bg-gradient-to-br from-blue-900/40 via-transparent to-teal-900/30"></div>
@@ -420,37 +423,7 @@ export default function HomePage() {
               {/* Light rays effect overlay */}
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
             </motion.div>
-          </AnimatePresence>
-          
-          {/* Navigation Dots - Enhanced */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setDirection(index > currentImage ? 1 : -1)
-                  setCurrentImage(index)
-                }}
-                className="group relative"
-                aria-label={`Go to slide ${index + 1}`}
-              >
-                <div className={`w-3 h-3 rounded-full transition-all duration-500 ${
-                  currentImage === index 
-                    ? "bg-white scale-125" 
-                    : "bg-white/50 scale-100 group-hover:bg-white/80"
-                }`} />
-                
-                {currentImage === index && (
-                  <motion.div 
-                    className="absolute -inset-1 rounded-full border border-white/30"
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1.5, opacity: 1 }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
+          </AnimatePresence> 
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-white">
@@ -460,15 +433,33 @@ export default function HomePage() {
             initial="hidden"
             animate="visible"
           >
+          
             <motion.div 
               variants={itemVariants}
               className="mb-6"
             >
-              <img
-                src={Logo}
-                alt="DuoDocs Logo"
-                className="w-96 h-auto mx-auto drop-shadow-xl"
+              <motion.h1 
+                className="text-6xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 drop-shadow-lg"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                AQUATICA
+              </motion.h1>
+              <motion.div 
+                className="h-0.5 w-64 md:w-80 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-3 mb-1"
+                initial={{ width: 0 }}
+                animate={{ width: "80%" }}
+                transition={{ duration: 1, delay: 0.3 }}
               />
+              <motion.p 
+                className="text-xl text-blue-100 tracking-widest font-light"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                PREMIUM MARINE PRODUCTS
+              </motion.p>
             </motion.div>
 
             <motion.h2
@@ -517,6 +508,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+
       {/* About Section */}
       <section id="about" className="py-24 bg-white" ref={aboutRef}>
         <div className="container mx-auto px-4">
@@ -530,7 +522,7 @@ export default function HomePage() {
               <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">
                 Pioneering <span className="text-blue-400">Sustainable</span> Fish Farming
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-br from-blue-900 to-teal-500 mb-8"></div>
+              <div className="w-20 h-1 bg-blue-600/95 mb-8"></div>
               <p className="text-lg mb-8 text-gray-700 leading-relaxed">
                 DuoDocs LTD is a Kenyan-based company specializing in all aspects of aquaculture and fishery services.
                 With a focus on providing high-quality products and expert consultation, we cater to both small-scale
@@ -579,7 +571,7 @@ export default function HomePage() {
             animate={missionInView ? "visible" : "hidden"}
           >
             <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
-            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-blue-600/95 mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -659,7 +651,7 @@ export default function HomePage() {
           >
             <a
               href="#shop"
-              className="inline-flex items-center bg-blue-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
+              className="inline-flex items-center bg-blue-600/85 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:translate-y-1"
             >
               Visit Our Shop
               <ChevronRight className="ml-2" />
@@ -833,7 +825,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">How We Work</h2>
-            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-blue-600/95 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700">
               Our approach to fish farming is guided by a comprehensive understanding of aquaculture principles and best
               practices.
@@ -875,7 +867,7 @@ export default function HomePage() {
             animate={projectsInView ? "visible" : "hidden"}
           >
             <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Our Projects</h2>
-            <div className="w-24 h-1 bg-gradient-to-br from-blue-900 to-teal-900 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-blue-600/95 mx-auto mb-8"></div>
             <p className="text-lg text-gray-700 mb-8">
               At DuoDocs Fish Farm, we are proud to introduce our latest project: a sustainable aquaculture initiative
               aimed at revolutionizing the way fish farming is conducted in Kenya.

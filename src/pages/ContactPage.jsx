@@ -1,6 +1,8 @@
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import {
+  ChevronDown,
+  ChevronUp,
   MapPin,
   Clock,
   Phone,
@@ -12,6 +14,7 @@ import {
   Twitter,
   Instagram,
   Linkedin,
+  ArrowRight
 } from "lucide-react"
 import { FaTiktok } from "react-icons/fa6"
 import Navbar from "../components/Navbar"
@@ -169,42 +172,135 @@ const ContactPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-blue-600/95 text-white">
-        <div className="container mx-auto px-4" ref={headerRef}>
-          <motion.div
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          {/* Using a reliable way to include the hero image */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('https://i.pinimg.com/736x/41/48/95/414895bccd4862ee3516defc06884ed1.jpg')" }}>
+          </div>
+                    
+          {/* Gradient overlays - enhanced for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/70"></div>
+          <div className="absolute inset-0 opacity-60 bg-gradient-to-b from-blue-900/50 via-transparent to-teal-900/40"></div>
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Content container with improved positioning and styling */}
+        <div
+          ref={headerRef} 
+          className="container relative z-10 mx-auto px-6 text-white"
+        >
+           <motion.div
             className="max-w-3xl mx-auto text-center"
             variants={fadeIn}
             initial="hidden"
-            animate={headerInView ? "visible" : "hidden"}
+            animate="visible" // Force visibility regardless of headerInView
           >
-            <h1 className="text-4xl md:text-4xl font-bold mb-6">Contact Us</h1>
-            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
-            <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
+            {/* Modernized heading with animated badge */}
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block mb-6 bg-gradient-to-r from-blue-600/90 to-teal-500/90 px-4 py-1 rounded-full"
+            >
+              <span className="text-sm font-medium tracking-wider uppercase">DuoDocs Aquaculture</span>
+            </motion.div>
+
+            {/* Main heading with modern styling */}
+            <motion.h1 
+              className="text-xl md:text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Contact Us
+            </motion.h1>
+
+            {/* Modern separator with animation */}
+            <motion.div 
+              className="h-1 w-24 bg-blue-600/85 mx-auto mb-8 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: 96 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            ></motion.div>
+
+            {/* Description text with improved styling */}
+            <motion.p 
+              className="text-lg md:text-xl text-blue-50 leading-relaxed font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
               We would love to hear from you. Feel free to reach out using the below details or fill out the contact
               form and we'll get back to you as soon as possible.
-            </p>
+            </motion.p>
+
+            {/* CTA button with modern design and hover effects */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-10"
+            >
+              <a
+                href="#contact-form"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-teal-500 hover:to-teal-600 
+                          text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:translate-y-1 
+                          shadow-lg shadow-blue-900/20 group"
+              >
+                Get In Touch
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" }}
+                >
+                  <ArrowRight className="ml-2" size={18} />
+                </motion.div>
+              </a>
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Wave Separator */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 120"
-            className="w-full h-auto"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#ffffff"
-              fillOpacity="1"
-              d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
-            ></path>
-          </svg>
+        {/* Decorative floating elements for modern touch */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div 
+            className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl"
+            animate={{ 
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.5, 0.3]
+            }}
+            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
+          ></motion.div>
+          <motion.div 
+            className="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-teal-500/10 blur-3xl"
+            animate={{ 
+              scale: [1.2, 1, 1.2],
+              opacity: [0.5, 0.3, 0.5]
+            }}
+            transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY }}
+          ></motion.div>
         </div>
-      </section>
 
+        {/* Scroll indicator with animation */}
+        <motion.div
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+        >
+          <a href="#contact-form" className="flex flex-col items-center text-white/80 hover:text-white transition-colors">
+            <span className="text-sm mb-2">Scroll Down</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" }}
+            >
+              <ChevronDown size={24} />
+            </motion.div>
+          </a>
+        </motion.div>
+      </section>
+      
       {/* Contact Info and Form Section */}
-      <section className="py-20 bg-white">
+      <section id="contact-form" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Info */}
